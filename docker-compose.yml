@@ -1,0 +1,15 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: invoice_postgres
+    environment:
+      POSTGRES_DB: invoice_db
+      POSTGRES_USER: invoice_user
+      POSTGRES_PASSWORD: invoice_pass
+    ports:
+      - "5432:5432"
+    volumes:
+      - invoice_postgres_data:/var/lib/postgresql/data
+
+volumes:
+  invoice_postgres_data:
