@@ -35,13 +35,6 @@ public class InvoiceAiService {
                 %s
                 """.formatted(rawText);
 
-        String rawResponse = chatClient.prompt()
-                .user(prompt)
-                .call()
-                .content();
-
-        log.info("AI raw response: {}", rawResponse);
-
         InvoiceExtractionResult result = chatClient.prompt()
                 .user(prompt)
                 .call()
