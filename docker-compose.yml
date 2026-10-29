@@ -11,5 +11,6 @@ services:
     volumes:
       - invoice_postgres_data:/var/lib/postgresql/data
 
+
 volumes:
   invoice_postgres_data:
